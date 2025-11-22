@@ -61,11 +61,6 @@ async def lifespan(app: FastAPI):
     """Application lifecycle management"""
     print("Starting application...")
 
-    # Base directories (from settings)
-    os.makedirs(settings.STORAGE_BASE_PATH, exist_ok=True)
-    os.makedirs(os.path.join(settings.STORAGE_BASE_PATH, "events"), exist_ok=True)
-    os.makedirs(os.path.join(settings.STORAGE_BASE_PATH, "temp"), exist_ok=True)
-
     # Migrations / tables in dev
     if APP_ENV == "development":
         print("Development mode: creating tables...")
