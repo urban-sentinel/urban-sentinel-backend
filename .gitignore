@@ -1,0 +1,10 @@
+venv/
+.venv/
+
+*.env
+
+app/config/
+
+.env
+__pycache__/
+*.pyc
